@@ -1,0 +1,37 @@
+ [
+		{
+		"FirstName" : "Greg",
+		"LastName" : "Marines",
+		"Title" : "Programmer",
+		"Phone" : "555-555-0001",
+		"contact_id" : "1"
+		},
+		{
+		"FirstName" : "Brandon",
+		"LastName" : "Bellegarde",
+		"Title" : "LDG - General Manager",
+		"Phone" : "555-555-0002",
+		"contact_id" : "2"
+		},
+		{
+		"FirstName" : "John",
+		"LastName" : "Sutherland",
+		"Title" : "Director of Marketing",
+		"Phone" : "555-555-0003",
+		"contact_id" : "3"
+		},
+		{
+		"FirstName" : "Karen",
+		"LastName" : "Contaway",
+		"Title" : "LDG - Customer Service",
+		"Phone" : "555-555-0004",
+		"contact_id" : "4"
+		},
+		{
+		"FirstName" : "Eric",
+		"LastName" : "Squires",
+		"Title" : "Copywriter",
+		"Phone" : "555-555-0005",
+		"contact_id" : "5"
+		}
+	] 

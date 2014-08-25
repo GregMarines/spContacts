@@ -39,7 +39,7 @@ var app = {
     // Update DOM on a Received Event
 	receivedEvent: function(id) {
 		console.log('Received Event: ' + id);
-		angular.bootstrap(document, ["angulargap"]);
+		angular.bootstrap(document, ["myApp"]);
 	}
     //receivedEvent: function(id) {
         //var parentElement = document.getElementById(id);

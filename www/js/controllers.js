@@ -1,4 +1,4 @@
-var contactControllers = angular.module('contactControllers', []);
+var contactControllers = angular.module('contactControllers', ['ngAnimate']);
 
 contactControllers.controller('ListController',['$scope', '$http', function($scope, $http){
   $http.get('js/data.json').success(function(data){

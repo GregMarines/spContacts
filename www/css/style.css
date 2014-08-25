@@ -152,12 +152,13 @@ color: #EEE8D5;
 }
 
 .btn {
-	  display: block;
+	  display: inline-block;
 	  padding: 6px 12px;
 	  margin-bottom: 0;
 	  font-size: 1rem;
 	  line-height: 140%;
 	  text-align: center;
+	  text-decoration: none;
 	  white-space: nowrap;
 	  vertical-align: middle;
 	  cursor: pointer;
@@ -177,7 +178,7 @@ float: left;
 }
 
 .btn .btn-right{
-float: left;
+float: right;
 }
 
 .btn:hover{
@@ -246,6 +247,11 @@ background: #FDF6E3;
 margin: 0;
 padding: 10px 10px 0 10px;
 border-bottom: 1px dotted black;
+opacity: .9;
+-webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
 }
 
 .artistlist a{
@@ -255,6 +261,11 @@ text-decoration: none;
 
 .artistlist li:hover{
 background: #FDF6E3;
+opacity: 1;
+-webkit-tranform: scale(1.2);
+-moz-transform: scale(1.2);
+-o-transform: scale(1.2);
+transform: scale(1.2);
 }
 
 .artist img{
@@ -304,10 +315,17 @@ max-width: 130px;
 border-radius: 20px;
 }
 
-.artistinfo .btn{
-
+.artist.ng-enter.ng-enter-active,
+.artist.ng-leave {
+opacity: 1;
+height: 80px;
+overflow:hidden;
 }
 
-
-
+.artist.ng-leave.ng-leave-active,
+.artist.ng-enter {
+opacity: 0;
+height: 0;
+overflow:hidden;
+}
 

@@ -33,13 +33,17 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-       // app.receivedEvent('deviceready');
-		angular.bootstrap(document, ["myApp"]);
+        app.receivedEvent('deviceready');
+		
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-       // var parentElement = document.getElementById(id);
-        //var listeningElement = parentElement.querySelector('.listening');
+	receivedEvent: function(id) {
+		console.log('Received Event: ' + id);
+		angular.bootstrap(document, ["angulargap"]);
+	}
+    //receivedEvent: function(id) {
+        //var parentElement = document.getElementById(id);
+       //var listeningElement = parentElement.querySelector('.listening');
        // var receivedElement = parentElement.querySelector('.received');
 
         //listeningElement.setAttribute('style', 'display:none;');
@@ -47,5 +51,5 @@ var app = {
 
         //console.log('Received Event: ' + id);
 		//angular.bootstrap(document, ["myApp"]);
-    }
+    //}
 };

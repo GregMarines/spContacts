@@ -284,7 +284,7 @@ margin-bottom: 10px;
 }
 
 .artist info{
-display:block;
+display: block;
 float: left;
 padding-left: 120px !important;
 }
@@ -295,7 +295,7 @@ border-bottom:none;
 
 .artistinfo {
 font-size: 1.1em;
-line-height: 160px;
+line-height: 160%;
 background: #EEE8D5;
 color: #0F4150;
 width: 90%;
@@ -315,9 +315,14 @@ margin-bottom: 0;
 }
 
 .artistinfo img{
-width: 40%;
+height:100%;
+width: 100%;
 max-width: 130px;
+max-height: 180px;
 border-radius: 20px;
+float:left;
+margin-right:25px;
+margin-bottom:5px;
 }
 
 .artist.ng-enter.ng-enter-active,

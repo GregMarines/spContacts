@@ -5,7 +5,10 @@
     <h1>{{artists[whichItem].FIRSTNAME + ' ' + artists[whichItem].LASTNAME}}</h1>
 	<div class="info">
 	  <h3>{{artists[whichItem].EMPLOYEE_TITLE}}</h3>
-	  <div class="bio">{{artists[whichItem].CELL_PHONE}}</div>
-  </div>
+	  <img ng-src="images/{{artists[whichItem].EMPLOYEE_PICTURE}}" alt="Photo of {{artists[whichItem].FIRSTNAME}}">
+	  <div class="bio">{{artists[whichItem].EMPLOYEE_BLURB}}</div>
+	</div>
+	<h1>Cell Phone: {{artists[whichItem].CELL_PHONE}}</h1>
+	<h1>Office Phone: {{artists[whichItem].OFFICE_PHONE}}</h1>	
   <a href="index.html">&laquo; Back to Search</a>
 </section>

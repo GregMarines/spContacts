@@ -58,7 +58,12 @@ display: block; }
 box-sizing: border-box; } 
 
 /* Base Styles */
-
+.main{
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    -moz-transition: all 0.15s ease-in-out 0s;
+    -o-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s;
+}
 .cf:before,
 .cf:after {
   content: " "; /* 1 */

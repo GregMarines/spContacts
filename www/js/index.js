@@ -45,7 +45,7 @@ var app = {
 		angular.bootstrap(document, ["myApp"]);
 	}, // result contains any message sent from the plugin call
 	successHandler: function(result) {
-		alert('Callback Success! Result = '+result)
+		//alert('Callback Success! Result = '+result)
 	},
 	errorHandler:function(error) {
 		alert(error);
@@ -57,12 +57,12 @@ var app = {
 				if ( e.regid.length > 0 )
 				{
 					console.log("Regid " + e.regid);
-					alert('registration id = '+e.regid);
+					//alert('registration id = '+e.regid);
 				}
 				break;
 			case 'message':
 				// this is the actual push notification. its format depends on the data model from the push server
-				alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+				alert('message = '+e.message+' msgcnt = '+e.msgcnt+' To DO: Add redirect to download update');
 				break;
 			case 'error':
 				alert('GCM error = '+e.msg);

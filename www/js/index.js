@@ -45,7 +45,7 @@ var app = {
 		angular.bootstrap(document, ["myApp"]);
 	}, // result contains any message sent from the plugin call
 	successHandler: function(result) {
-		//alert('Callback Success! Result = '+result)
+		alert('Callback Success! Result = '+result)
 	},
 	errorHandler:function(error) {
 		alert(error);
@@ -57,7 +57,7 @@ var app = {
 				if ( e.regid.length > 0 )
 				{
 					console.log("Regid " + e.regid);
-					//alert('registration id = '+e.regid);
+					alert('registration id = '+e.regid);
 				}
 				break;
 			case 'message':
@@ -69,8 +69,8 @@ var app = {
 				break;
 			default:
 				alert('An unknown GCM event has occurred');
-				break;
-		}
+	break;
+	}
 	}
     //receivedEvent: function(id) {
         //var parentElement = document.getElementById(id);

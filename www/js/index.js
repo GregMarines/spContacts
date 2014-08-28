@@ -34,8 +34,8 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-		var pushNotification = window.plugins.pushNotification;
-		pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"746935138522","ecb":"app.onNotificationGCM"});
+		//var pushNotification = window.plugins.pushNotification;
+		//pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"746935138522","ecb":"app.onNotificationGCM"});
 		
 		
     },
@@ -69,7 +69,7 @@ var app = {
 				break;
 			default:
 				alert('An unknown GCM event has occurred');
-	break;
+			break;
 	}
 	}
     //receivedEvent: function(id) {

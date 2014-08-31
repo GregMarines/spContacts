@@ -58,7 +58,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
+	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
@@ -104,9 +104,12 @@
         Otherwise, you can specify specific domains:
     -->
     <access origin="*"/> <!-- allow local pages -->
+	<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->	
     <!--
         <access origin="http://phonegap.com" />                    - allow any secure requests to http://phonegap.com/
         <access origin="http://phonegap.com" subdomains="true" />  - same as above, but including subdomains, such as http://build.phonegap.com/
     -->
+
+
 
 </widget>

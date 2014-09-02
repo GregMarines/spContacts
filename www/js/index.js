@@ -25,7 +25,7 @@ function initPushwoosh()
     pushNotification.onDeviceReady();
  
     //register for push notifications
-    pushNotification.registerDevice({ projectid: "GOOGLE_PROJECT_ID", appid : "PUSHWOOSH_APP_ID" },
+    pushNotification.registerDevice({ projectid: "746935138522", appid : "CDB9D-5414F" },
         function(status) {
             //this is push token
             var pushToken = status;

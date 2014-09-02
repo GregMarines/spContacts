@@ -19,6 +19,7 @@
  
 function initPushwoosh()
 {
+	alert('initPushwoosh');
     //get pushwoosh plugin
     var pushNotification = window.plugins.pushNotification;
     //notify plugin that device is ready, this is VERY important as it will dispatch on start push notification
@@ -30,9 +31,11 @@ function initPushwoosh()
             //this is push token
             var pushToken = status;
             console.warn('push token: ' + pushToken);
+			alert('push token: ' + pushToken);
         },
         function(status) {
             console.warn(JSON.stringify(['failed to register ', status]));
+			 alert(JSON.stringify(['failed to register ', status]));
         }
     );
  
@@ -43,6 +46,7 @@ function initPushwoosh()
                                  
             if(typeof(userData) != "undefined") {
             console.warn('user data: ' + JSON.stringify(userData));
+			alert('user data: ' + JSON.stringify(userData));
         }
                                      
         alert(title);

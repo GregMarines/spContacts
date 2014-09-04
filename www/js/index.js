@@ -44,7 +44,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
 			document.addEventListener("deviceready", initPushwoosh, true);
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+  
 		
     },
     // deviceready Event Handler
@@ -52,7 +52,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-
+app.initPushwoosh();
         app.receivedEvent('deviceready');
 	},
    // Update DOM on a Received Event

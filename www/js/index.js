@@ -24,7 +24,7 @@ function initPushwoosh()
     var pushNotification = window.plugins.pushNotification;
 	alert(pushNotification.toSource());
     //notify plugin that device is ready, this is VERY important as it will dispatch on start push notification
-    pushNotification.onDeviceReady();
+    //pushNotification.onDeviceReady();
  
     //register for push notifications
     pushNotification.registerDevice({ projectid: "524682876054", appid : "CDB9D-5414F" },

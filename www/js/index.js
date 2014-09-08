@@ -74,7 +74,7 @@ function registerPushwooshAndroid() {
 		var title = event.notification.title;
 		var userData = event.notification.userdata;
 		var msg = event.notification.message;
-		window.location.href = "http://www.smokingpipes.com";
+		window.location.href = "https://build.phonegap.com/apps/1061105/share";
 		//dump custom data to the console if it exists
 		if(typeof(userData) != "undefined") {
 			console.warn('user data: ' + JSON.stringify(userData));

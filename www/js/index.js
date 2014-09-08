@@ -69,7 +69,8 @@ if(typeof(userData) != "undefined") {
 console.warn('user data: ' + JSON.stringify(userData));
 }
 //and show alert
-navigator.notification.alert(title);
+// **commented it out //navigator.notification.alert(title);
+navigator.notification.alert(msg);
 //stopping geopushes
 pushNotification.stopGeoPushes();
 });

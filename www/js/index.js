@@ -64,6 +64,7 @@ var pushNotification = window.plugins.pushNotification;
 document.addEventListener('push-notification', function(event) {
 var title = event.notification.title;
 var userData = event.notification.userdata;
+var msg = event.notification.message;
 //dump custom data to the console if it exists
 if(typeof(userData) != "undefined") {
 console.warn('user data: ' + JSON.stringify(userData));

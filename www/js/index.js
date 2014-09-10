@@ -74,8 +74,9 @@ function registerPushwooshAndroid() {
 		var title = event.notification.title;
 		var userData = event.notification.userdata;
 		var msg = event.notification.message;
-		alert("title" + title);
-		alert("userData" + userData);
+		// ***** BOTH UNDEFINED ***** //
+		//alert("title" + title);
+		//alert("userData" + userData);
 		alert("msg" + msg);
 		window.location.href = "https://build.phonegap.com/apps/1061105/share";
 		//dump custom data to the console if it exists
@@ -85,6 +86,8 @@ function registerPushwooshAndroid() {
 		
 		//and show alert
 		// **commented it out //navigator.notification.alert(title);
+		navigator.notification.alert(title);
+		navigator.notification.alert(userData);
 		navigator.notification.alert(msg);
 		
 		//stopping geopushes

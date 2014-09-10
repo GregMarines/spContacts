@@ -86,8 +86,6 @@ function registerPushwooshAndroid() {
 		
 		//and show alert
 		// **commented it out //navigator.notification.alert(title);
-		navigator.notification.alert(title);
-		navigator.notification.alert(userData);
 		navigator.notification.alert(msg);
 		
 		//stopping geopushes
@@ -115,10 +113,12 @@ function onPushwooshAndroidInitialized(pushToken)
 	
 	pushNotification.getTags(function(tags) {
 		console.warn('tags for the device: ' + JSON.stringify(tags));
+		alert('tags for the device: ' + JSON.stringify(tags));
 	},
 	
 	function(error) {
 		console.warn('get tags error: ' + JSON.stringify(error));
+		alert('get tags error: ' + JSON.stringify(error));		
 	});
 	//set multi notificaiton mode
 	//pushNotification.setMultiNotificationMode();

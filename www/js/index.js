@@ -112,13 +112,12 @@ function onPushwooshAndroidInitialized(pushToken)
 	var pushNotification = window.plugins.pushNotification;
 	
 	pushNotification.getTags(function(tags) {
+		// ****** {"Country":"us","City":"us,atlanta","Language":"en"} *** //
 		console.warn('tags for the device: ' + JSON.stringify(tags));
-		alert('tags for the device: ' + JSON.stringify(tags));
 	},
 	
 	function(error) {
-		console.warn('get tags error: ' + JSON.stringify(error));
-		alert('get tags error: ' + JSON.stringify(error));		
+		console.warn('get tags error: ' + JSON.stringify(error));		
 	});
 	//set multi notificaiton mode
 	//pushNotification.setMultiNotificationMode();
@@ -203,6 +202,16 @@ function initPushwoosh() {
 		}
 } 
 
+function getDeviceStuff() {
+	alert('Device Name' + device.name);
+	alert('Device Phonegap' + device.phonegap);
+	alert('Device Platform: ' + device.platform ); 
+	alert('Device UUID: ' + device.uuid); 
+	alert('Device Version: '  + device.version);
+	
+} 
+
+
 var app = {
     
 	// Application Constructor
@@ -222,6 +231,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+    app.getDeviceStuff();
 	initPushwoosh();
     app.receivedEvent('deviceready');
 	},

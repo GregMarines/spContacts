@@ -203,12 +203,14 @@ function initPushwoosh() {
 } 
 
 function getDeviceStuff() {
+	alert('hello from getDeviceStuff');
+	/*
 	alert('Device Name' + device.name);
 	alert('Device Phonegap' + device.phonegap);
 	alert('Device Platform: ' + device.platform ); 
 	alert('Device UUID: ' + device.uuid); 
 	alert('Device Version: '  + device.version);
-	
+	*/
 } 
 
 

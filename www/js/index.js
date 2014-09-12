@@ -229,7 +229,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-		document.addEventListener("pause", AppPaused, false);
+		document.addEventListener("pause", this.AppPaused, false);
     },
     
 	

@@ -252,6 +252,6 @@ var app = {
 	alert('Received Event: ' + id);
 	var dname = device.uuid;
 	var dplatform = device.platform;
-	alert("device uuid " + dname + " " + device patform " + dplatform);
+	alert("device uuid " + dname + "  " + "device patform " + dplatform);
 	}
 };

@@ -250,8 +250,8 @@ var app = {
 	//listeningElement.setAttribute('style', 'display:none;');
 	//receivedElement.setAttribute('style', 'display:block;');
 	alert('Received Event: ' + id);
-						var dname = device.uuid;
-
-			alert("device uuid" + dname);
+	var dname = device.uuid;
+	var dplatform = device.platform;
+	alert("device uuid " + dname + " " + device patform " + dplatform);
 	}
 };

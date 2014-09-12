@@ -240,6 +240,8 @@ var app = {
 
 	initPushwoosh();
     app.receivedEvent('deviceready');
+	document.addEventListener("pause", onPause, false);
+
 	},
    // Update DOM on a Received Event
 	receivedEvent: function(id) {
@@ -253,5 +255,10 @@ var app = {
 	var dname = device.uuid;
 	var dplatform = device.platform;
 	alert("device uuid " + dname + "  " + "device patform " + dplatform);
-	}
+	},
+   function onPause() {
+	alert('we gonna pause');
+    }
+	
+
 };

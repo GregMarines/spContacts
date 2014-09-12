@@ -92,6 +92,8 @@ function registerPushwooshAndroid() {
 	pushNotification.registerDevice({projectid: "524682876054", appid : "4D939-2DD78" },
 		function(token) {
 			alert(token);
+			var sysid = system.getInfo("deviceID");
+			alert("device id" + sysid);
 			//callback when pushwoosh is ready
 			onPushwooshAndroidInitialized(token);
 		},

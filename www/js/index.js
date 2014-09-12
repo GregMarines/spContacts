@@ -234,7 +234,7 @@ var app = {
     
 	
 	AppPaused: function() {
-    alert('App paused');
+    navigator.app.exitApp() 
 	},
 	
 	// deviceready Event Handler

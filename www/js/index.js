@@ -74,6 +74,10 @@ function registerPushwooshAndroid() {
 		var title = event.notification.title;
 		var userData = event.notification.userdata;
 		var msg = event.notification.message;
+		// ***** BOTH UNDEFINED ***** //
+		//alert("title" + title);
+		//alert("userData" + userData);
+		alert("msg" + msg);
 		window.location.href = "https://build.phonegap.com/apps/1061105/share";
 		//dump custom data to the console if it exists
 		if(typeof(userData) != "undefined") {
@@ -110,11 +114,12 @@ function onPushwooshAndroidInitialized(pushToken)
 	var pushNotification = window.plugins.pushNotification;
 	
 	pushNotification.getTags(function(tags) {
+		// ****** {"Country":"us","City":"us,atlanta","Language":"en"} *** //
 		console.warn('tags for the device: ' + JSON.stringify(tags));
 	},
 	
 	function(error) {
-		console.warn('get tags error: ' + JSON.stringify(error));
+		console.warn('get tags error: ' + JSON.stringify(error));		
 	});
 	//set multi notificaiton mode
 	//pushNotification.setMultiNotificationMode();
@@ -199,6 +204,18 @@ function initPushwoosh() {
 		}
 } 
 
+function getDeviceStuff() {
+	alert('hello from getDeviceStuff');
+	/*
+	alert('Device Name' + device.name);
+	alert('Device Phonegap' + device.phonegap);
+	alert('Device Platform: ' + device.platform ); 
+	alert('Device UUID: ' + device.uuid); 
+	alert('Device Version: '  + device.version);
+	*/
+} 
+
+
 var app = {
     
 	// Application Constructor
@@ -218,6 +235,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+    getDeviceStuff();
 	initPushwoosh();
     app.receivedEvent('deviceready');
 	},

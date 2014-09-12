@@ -237,9 +237,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
     //getDeviceStuff();
-					var dname = device.name;
 
-			alert("device id" + dname);
 	initPushwoosh();
     app.receivedEvent('deviceready');
 	},
@@ -252,5 +250,8 @@ var app = {
 	//listeningElement.setAttribute('style', 'display:none;');
 	//receivedElement.setAttribute('style', 'display:block;');
 	alert('Received Event: ' + id);
+						var dname = device.uuid;
+
+			alert("device uuid" + dname);
 	}
 };

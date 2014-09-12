@@ -229,7 +229,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-document.addEventListener("pause", onPause, false);
+
     },
     // deviceready Event Handler
     //
@@ -240,8 +240,6 @@ document.addEventListener("pause", onPause, false);
 
 	initPushwoosh();
     app.receivedEvent('deviceready');
-	
-
 	},
    // Update DOM on a Received Event
 	receivedEvent: function(id) {
@@ -255,10 +253,6 @@ document.addEventListener("pause", onPause, false);
 	var dname = device.uuid;
 	var dplatform = device.platform;
 	alert("device uuid " + dname + "  " + "device patform " + dplatform);
-	},
-   function onPause() {
-	alert('we gonna pause');
-    }
-	
+	}
 
 };

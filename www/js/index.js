@@ -204,8 +204,9 @@ function initPushwoosh() {
 
 function getDeviceStuff() {
 	alert('hello from getDeviceStuff');
-				var sysid = system.getInfo("deviceID");
-			alert("device id" + sysid);
+				var dname = device.name;
+
+			alert("device id" + dname);
 	/*
 	alert('Device Name' + device.name);
 	alert('Device Phonegap' + device.phonegap);

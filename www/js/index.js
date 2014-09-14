@@ -228,10 +228,15 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+
         document.addEventListener('deviceready', this.onDeviceReady, false);
 		
     },
-
+    
+	
+	function AppPaused() {
+    navigator.app.exitApp() 
+	},
 	
 	// deviceready Event Handler
     //
@@ -239,7 +244,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
     //getDeviceStuff();
-
+		document.addEventListener("pause", AppPaused, false);
 	initPushwoosh();
 
     app.receivedEvent('deviceready');

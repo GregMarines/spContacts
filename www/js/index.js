@@ -231,11 +231,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
 		
     },
-    
-	
-	AppPaused: function() {
-    navigator.app.exitApp() 
-	},
+
 	
 	// deviceready Event Handler
     //
@@ -245,7 +241,7 @@ var app = {
     //getDeviceStuff();
 
 	initPushwoosh();
-	document.addEventListener("pause", AppPaused, false);
+
     app.receivedEvent('deviceready');
 	},
    // Update DOM on a Received Event

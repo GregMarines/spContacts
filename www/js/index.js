@@ -200,7 +200,7 @@ function initPushwoosh() {
 			registerPushwooshIOS();
 			pushNotification.onDeviceReady();
 		}
-}, 
+} 
 
 
 
@@ -224,30 +224,23 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-		initPushwoosh();
-		app.receivedEvent('deviceready');
+
+
+	initPushwoosh();
+    app.receivedEvent('deviceready');
 	},
    // Update DOM on a Received Event
 	receivedEvent: function(id) {
-		angular.bootstrap(document, ["myApp"]);
-		var parentElement = document.getElementById(id);
-		//var listeningElement = parentElement.querySelector('.listening');
-		//var receivedElement = parentElement.querySelector('.received');
-		//listeningElement.setAttribute('style', 'display:none;');
-		//receivedElement.setAttribute('style', 'display:block;');
-		alert('Received Event: ' + id);
-		var dname = device.uuid;
-		var dplatform = device.platform;
-		alert("device uuid " + dname + "  " + "device patform " + dplatform);
-		
-		document.addEventListener("backbutton", backKeyDown, true); 
-		
-		function backKeyDown() { 
-			// Call my back key code here.
-			alert('go back!');
-		}
-		
-		
+	angular.bootstrap(document, ["myApp"]);
+	var parentElement = document.getElementById(id);
+	//var listeningElement = parentElement.querySelector('.listening');
+	//var receivedElement = parentElement.querySelector('.received');
+	//listeningElement.setAttribute('style', 'display:none;');
+	//receivedElement.setAttribute('style', 'display:block;');
+	alert('Received Event: ' + id);
+	var dname = device.uuid;
+	var dplatform = device.platform;
+	alert("device uuid " + dname + "  " + "device patform " + dplatform);
 	}
 
 };

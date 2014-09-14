@@ -229,7 +229,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-		document.addEventListener("pause", this.AppPaused, false);
+		
     },
     
 	
@@ -245,6 +245,7 @@ var app = {
     //getDeviceStuff();
 
 	initPushwoosh();
+	document.addEventListener("pause", this.AppPaused, false);
     app.receivedEvent('deviceready');
 	},
    // Update DOM on a Received Event

@@ -245,7 +245,7 @@ var app = {
     //getDeviceStuff();
 
 	initPushwoosh();
-	document.addEventListener("pause", this.AppPaused, false);
+	document.addEventListener("pause", AppPaused, false);
     app.receivedEvent('deviceready');
 	},
    // Update DOM on a Received Event

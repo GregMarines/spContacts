@@ -200,21 +200,12 @@ function initPushwoosh() {
 			registerPushwooshIOS();
 			pushNotification.onDeviceReady();
 		}
-} 
+}, 
 
-function getDeviceStuff() {
-	alert('hello from getDeviceStuff');
-				var dname = device.name;
-
-			alert("device id" + dname);
-	/*
-	alert('Device Name' + device.name);
-	alert('Device Phonegap' + device.phonegap);
-	alert('Device Platform: ' + device.platform ); 
-	alert('Device UUID: ' + device.uuid); 
-	alert('Device Version: '  + device.version);
-	*/
-} 
+function backKeyDown() { 
+     // Call my back key code here.
+ 	alert('go back!');
+},
 
 
 var app = {
@@ -228,39 +219,31 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-
         document.addEventListener('deviceready', this.onDeviceReady, false);
-		
+
     },
-    
-	
-	function AppPaused() {
-    navigator.app.exitApp() 
-	},
-	
-	// deviceready Event Handler
+    // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-    //getDeviceStuff();
-		document.addEventListener("pause", AppPaused, false);
-	initPushwoosh();
-
-    app.receivedEvent('deviceready');
+		initPushwoosh();
+		app.receivedEvent('deviceready');
 	},
    // Update DOM on a Received Event
 	receivedEvent: function(id) {
-	angular.bootstrap(document, ["myApp"]);
-	var parentElement = document.getElementById(id);
-	//var listeningElement = parentElement.querySelector('.listening');
-	//var receivedElement = parentElement.querySelector('.received');
-	//listeningElement.setAttribute('style', 'display:none;');
-	//receivedElement.setAttribute('style', 'display:block;');
-	alert('Received Event: ' + id);
-	var dname = device.uuid;
-	var dplatform = device.platform;
-	alert("device uuid " + dname + "  " + "device patform " + dplatform);
+		angular.bootstrap(document, ["myApp"]);
+		var parentElement = document.getElementById(id);
+		//var listeningElement = parentElement.querySelector('.listening');
+		//var receivedElement = parentElement.querySelector('.received');
+		//listeningElement.setAttribute('style', 'display:none;');
+		//receivedElement.setAttribute('style', 'display:block;');
+		alert('Received Event: ' + id);
+		var dname = device.uuid;
+		var dplatform = device.platform;
+		alert("device uuid " + dname + "  " + "device patform " + dplatform);
+		
+		document.addEventListener("backbutton", backKeyDown, true); 
 	}
 
 };

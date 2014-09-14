@@ -202,10 +202,7 @@ function initPushwoosh() {
 		}
 }, 
 
-function backKeyDown() { 
-     // Call my back key code here.
- 	alert('go back!');
-},
+
 
 
 var app = {
@@ -244,6 +241,13 @@ var app = {
 		alert("device uuid " + dname + "  " + "device patform " + dplatform);
 		
 		document.addEventListener("backbutton", backKeyDown, true); 
+		
+		function backKeyDown() { 
+			// Call my back key code here.
+			alert('go back!');
+		}
+		
+		
 	}
 
 };

@@ -228,6 +228,7 @@ var app = {
 
 	initPushwoosh();
     app.receivedEvent('deviceready');
+	document.addEventListener("backbutton", handleDeviceBackButton, false);
 	},
    // Update DOM on a Received Event
 	receivedEvent: function(id) {

@@ -18,3 +18,9 @@ myApp.config (['$routeProvider', function($routeProvider) {
   });  
 	
 }]);
+
+
+function handleDeviceBackButton(){
+     alert('ill never see this');
+	 angular.element('[ng-controller=myApp]').scope().goHome();
+}

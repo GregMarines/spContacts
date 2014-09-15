@@ -22,24 +22,19 @@ myApp.config (['$routeProvider', function($routeProvider) {
 
 function handleDeviceBackButton(){
      alert('ill never see this');
-	 navigator.app.exitApp();
-	 //angular.element('[ng-controller=myApp]').scope().goHome();
+	              navigator.notification.confirm(
+                        'Do you want to quit', 
+                        onConfirmQuit, 
+                        'QUIT TITLE', 
+                        'OK,Cancel'  
+                    );
 }
 
-function AppCtrl($scope, $location) {
-    $scope.goHome = function () {
 
-        navigator.app.exitApp();   // This will exit the application       
 
-	   /*
-	   if ((window.location) && (window.location.hash) && (window.location.hash.indexOf('home') > 0)) {
-            navigator.app.exitApp();   // This will exit the application
-        }
-        else {
-            $location.path('/home');  // This will redirect the application to home page
 
-            if (!$scope.$$phase)
-                $scope.$apply();
-        }*/
-    }	
-}
+    function onConfirmQuit(button){
+       if(button == "1"){
+        setTimeout( function() { navigator.app.exitApp(); }); 
+    }
+    }
